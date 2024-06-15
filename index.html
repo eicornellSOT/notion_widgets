@@ -1,1 +1,82 @@
-Hello World!
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>jQuery Expand Collapse List Item </title> 
+<script language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>
+
+<style type="text/css">
+div.trigger {
+    padding: 0 0 0 20px;
+    margin: 0 0 5px 0;
+    background: url(http://www.peckingduck.com.au/wp-content/uploads/2010/08/plusminus.jpg) no-repeat;
+    height: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    float:left;
+}
+div.trigger a {
+    color: #474747;
+    text-decoration: none;
+    display: block;
+    cursor:pointer;
+}
+div.trigger a:hover {
+    color: #ff4b43;
+}
+div.active {
+    background-position: left bottom;
+} /*--When toggle is triggered, it will shift the image to the bottom to show its "opened" state--*/
+.toggle_container {
+    margin: 0 0 5px;
+    padding: 0;
+    overflow: hidden;
+    clear: both;
+}
+.toggle_container .block {
+    padding: 0px 0px 0px 18px; /*--Padding of Container--*/
+}
+</style>
+
+<script type="text/javascript">
+ $(document).ready(function(){
+     $("div.trigger").click(function(){
+     $(this).toggleClass("active").next().toggle();
+    });
+});
+</script>
+
+</head> 
+ 
+<body> 
+<div class="trigger active"><a>Open by default</a>
+</div>
+<div class="toggle_container">
+    <div class="block">    
+        <ul>
+            <li>List item 01</li>
+            <li>List item 02</li>
+            <li>List item 03</li>
+            <li>List item 04</li>
+        </ul>
+    </div>
+</div>
+
+    <div class="trigger"><a>Closed by default</a>
+</div>
+<div class="toggle_container">
+    <div class="block">    
+        <ul>
+            <li>List item 01</li>
+            <li>List item 02</li>
+            <li>List item 03</li>
+            <li>List item 04</li>
+        </ul>
+    </div>
+</div>
+
+    
+</body> 
+</html> 
+
+
