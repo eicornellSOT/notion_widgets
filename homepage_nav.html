@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+			color: #F0EAD6;
+		}
+
+		.navMenu a {
+			color: #F0EAD6;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #F0EAD6;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="Email" onclick="navigate(this.id)" href="https://www.notion.so/Project-Dashboard-6d8aff764fe643d9a0bd9be2a736b7d3?pvs=4" style="color:white;"> </i> Email</a>
+		<a id="Canva" onclick="navigate(this.id)" href="https://www.notion.so/Project-Organizer-59dee3c5279441d8b76f3bed5f269d24?pvs=4" style="color:white;"></i> Canva</a>
+		<a id="Calendar" onclick="navigate(this.id)" href="#" style="color:white;"> </i> Calendar</a>
+		<a id="Clients" onclick="navigate(this.id)" href="#" style="color:white;"> </i> Clients</a>
+		<a id="Templates" onclick="navigate(this.id)" href="#" style="color:white;"> </i> Templates</a>
+		<a id="Squarespace" onclick="navigate(this.id)" href="#" style="color:white;"> </i> Squarespace</a>
+		<a id="Pipedrive" onclick="navigate(this.id)" href="#" style="color:white;"> </i> Pipedrive</a>
+		<a id="LucidChart" onclick="navigate(this.id)" href="#" style="color:white;"> </i> LucidChart</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'Email')
+				window.open("https://mail.google.com/mail/u/0/", '_blank').focus();
+			else if (id == "Canva")
+				window.open("https://www.canva.com/projects", '_blank').focus();
+			else if (id == "Calendar")
+				window.open("https://calendar.google.com/calendar/u/0/r/week", '_blank').focus();
+			else if (id == "Clients")
+				window.open("https://drive.google.com/drive/u/0/folders/123XoTmFNrVrtGRKtku5j_mZL0N06Fwia", '_blank').focus();
+			else if (id == "Templates")
+				window.open("https://drive.google.com/drive/u/0/folders/1C6Lrcv_SMPbat1KX2C6HP0p7Tox2KfVf", '_blank').focus();
+			else if (id == "Squarespace")
+				window.open("https://account.squarespace.com/", '_blank').focus();
+			else if (id == "Pipedrive")
+				window.open("https://app.pipedrive.com/auth/login", '_blank').focus();
+			else if (id == "LucidChart")
+				window.open("https://www.lucidchart.com/pages/?", '_blank').focus();
+
+
+		}
+	</script>
+
+
+</body>
+
+</html>
